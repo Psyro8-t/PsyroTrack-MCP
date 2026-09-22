@@ -10,36 +10,26 @@ All tracker data is stored entirely on your own local machine inside your OS hom
 `~/.psyrotrack/data.json`
 
 ## Features
-- **Default Protocols**: By default, you get Psyro8-t's legendary 10 protocols:
-  1. Wake up 6 am
-  2. Study for 3 hr
-  3. 3 hour code
-  4. 2.5hr coding
-  5. Updating Content
-  6. 30+ min exercise
-  7. Walk up to 3k steps
-  8. Read book 10-20 min
-  9. Write your expense
-  10. Create new things
-- **Customizable**: Want your own routine? Use the `set_protocols` or `init_user` tools to wipe the template and use your own completely isolated tracker list!
+- **Default Protocols**: By default, you get Psyro8-t's legendary 10 protocols (Wake up 6am, 3hr code, etc.)
+- **Customizable**: Want your own routine? Just tell the AI to set up your custom protocols!
 - **Stats & Trackers**: Generate dynamic monthly reports and streak statistics natively inside Claude/Cursor.
 
-## Installation
+## ⚡ Super Easy Installation (No Download Required!)
 
-### For Claude Desktop App
-1. Clone or download this repository.
-2. Run `npm install` inside the folder.
-3. Open your Claude desktop config file:
+You don't need to download any code. Just use the `npx` command to run it directly from GitHub!
+
+### For Claude Desktop App (Mac/Windows)
+1. Open your Claude desktop config file:
    - **Mac**: `~/Library/Application Support/Claude/claude_desktop_config.json`
    - **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
-4. Add the following to your config:
+2. Add the following to your config:
 
 ```json
 {
   "mcpServers": {
     "psyrotrack": {
-      "command": "node",
-      "args": ["/ABSOLUTE_PATH_TO_THIS_FOLDER/index.js"]
+      "command": "npx",
+      "args": ["-y", "github:Psyro8-t/PsyroTrack-MCP"]
     }
   }
 }
