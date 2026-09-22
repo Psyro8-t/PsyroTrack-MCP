@@ -56,6 +56,13 @@ function generateId() {
   return Math.random().toString(36).substring(2, 9);
 }
 
+function getLocalDateString() {
+  const now = new Date();
+  const offset = now.getTimezoneOffset() * 60000;
+  const localDate = new Date(now.getTime() - offset);
+  return localDate.toISOString().split('T')[0];
+}
+
 // --- MCP Server Setup ---
 const server = new Server(
   {
@@ -298,11 +305,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 
         const dates = Object.keys(data.ticks).sort();
         let totalTicks = 0;
-        let streak = 0;
         let currentStreak = 0;
-        
-        // Very basic current streak calculation (consecutive days with at least 1 tick)
-        const todayStr = new Date().toISOString().split('T')[0];
         
         for (let i = dates.length - 1; i >= 0; i--) {
             if (data.ticks[dates[i]].length > 0) {
