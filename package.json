@@ -4,6 +4,7 @@
   "description": "PsyroTrack MCP - Notion ka Baap, Free for Lifetime. Developed by Psyro8-t.",
   "main": "index.js",
   "type": "module",
+  "bin": "./index.js",
   "scripts": {
     "start": "node index.js"
   },
