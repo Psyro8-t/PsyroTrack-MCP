@@ -1,0 +1,15 @@
+{
+  "name": "psyrotrack-mcp",
+  "version": "1.0.0",
+  "description": "PsyroTrack MCP - Notion ka Baap, Free for Lifetime. Developed by Psyro8-t.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Psyro8-t",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.1"
+  }
+}
